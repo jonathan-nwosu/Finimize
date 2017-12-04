@@ -11,7 +11,8 @@
 
 		<!-- Header -->
 			<header id="header">
-				
+				<h1>Finimize Tax Calculator</h1>
+				<p>The best place to calculate your taxes! <br><br> Join the 10,000+ others who have also calculated their taxes: </p>
 			</header>
 
 		
