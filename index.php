@@ -23,7 +23,9 @@
 		
 		<!-- Footer -->
 			<footer id="footer">
-				
+				<ul class="copyright">
+					<li>&copy; Finimize</li>
+				</ul>
 			</footer>
 
 		<!-- Scripts -->
