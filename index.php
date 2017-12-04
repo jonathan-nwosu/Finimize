@@ -15,8 +15,12 @@
 				<p>The best place to calculate your taxes! <br><br> Join the 10,000+ others who have also calculated their taxes: </p>
 			</header>
 
+			<!-- Signup Form -->
+			<form id="signup-form" method="post" action="">
+				<input type="number" name="income" id="income" placeholder="Taxable income" />
+				<input type="submit" value="Calculate Tax" name="submit"/>
+			</form>
 		
-
 		<!-- Footer -->
 			<footer id="footer">
 				
