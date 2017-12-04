@@ -36,4 +36,48 @@
 
 </html>
 
+<?php
+
+// Check for empty fields
+if((isset($_POST['income']))&&(!empty($_POST['income']))){
+
+$income = $_POST['income'];
+
+// Remove all illegal characters from email
+$income = filter_var($income, FILTER_VALIDATE_INT);
+
+echo "<div style= 'font-size: 20pt;'>";
+
+if (!filter_var($income, FILTER_VALIDATE_INT) === false){
+		
+	if ($income > 0 && $income <= 11500) {
+    	$roundedIncome = round($income, 2);
+    	echo 'Tax to pay: £ 0';
+
+	} elseif ($income >= 11501 && $income <= 45000) {
+		$tax = (($income/100)*20);
+		$roundedTax = round($tax, 2);
+		echo 'Tax to pay: £ '. $roundedTax;
+
+	} elseif ($income >= 45001 && $income <= 150000) {
+		$tax  = (($income/100)*40);
+		$roundedTax = round($tax , 2);
+		echo 'Tax to pay: £ '. $roundedTax;
+
+	} elseif ($income > 150000) {
+		$tax = (($income/100)*45);
+		$roundedTax = round($tax, 2);
+		echo 'Tax to pay: £ '. $roundedTax;
+	}
+
+echo "    :)) </div>";
+
+	return true;
+
+	} 
+}
+
+?>
+
+
 
